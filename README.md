@@ -29,4 +29,10 @@ storage strategies for the document evolution history:
 version of the document in a main memory list of subsequent document versions.
 - Stable: for each document change the mechanism keeps the previous version of the
 document on disk storage.
+- [x] As a user, I should be able to change the storage strategy of the version tracking mechanism
+at any time.
+- If I change from Volatile to Stable the application should store the document evolution
+history on disk storage.
+- If I change from Stable to Volatile the application should load the document evolution
+history from disk storage to main memory.
 
