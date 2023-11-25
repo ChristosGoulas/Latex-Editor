@@ -35,7 +35,7 @@ at any time.
 history on disk storage.
 - If I change from Stable to Volatile the application should load the document evolution
 history from disk storage to main memory.
-- [x]As a user, I should be able to disable the version tracking mechanism at any time.
+- [x] As a user, I should be able to disable the version tracking mechanism at any time.
 - [x] As a user, I should be able to rollback to a previous version of the Latex document based on
 the document evolution history. The application should notify me if I try to use the rollback action
 and the version tracking mechanism has not been enabled before.
