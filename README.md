@@ -2,7 +2,7 @@
 LatexEditor, an application that facilitates the writing and maintenance of Latex documents.
 
 # Purpose
-Latex is a well known high quality document preparation markup language [1,2,3,4]. It provides a large
+Latex is a well known high quality document preparation markup language. It provides a large
 variety of styles and commands that enable advanced document formatting. Typically, a Latex document
 is compiled with a tool like MikTex, Lyx, etc. to produce a respective formatted document in pdf, ps, etc.
 Formatting documents with Latex is like a programming process as it involves the proper usage of Latex
@@ -35,4 +35,18 @@ at any time.
 history on disk storage.
 - If I change from Stable to Volatile the application should load the document evolution
 history from disk storage to main memory.
+- [x]As a user, I should be able to disable the version tracking mechanism at any time.
+- [x] As a user, I should be able to rollback to a previous version of the Latex document based on
+the document evolution history. The application should notify me if I try to use the rollback action
+and the version tracking mechanism has not been enabled before.
+- [x] As a user, I should be able to save the Latex document on disk storage.
+- [x] As a user, I should be able to load the Latex document from disk storage.
+
+# References
+- General information about the Latex project https://www.latex-project.org/
+- Download MikTex - Latex distribution - https://miktex.org/
+- WinEdt - manipulation and compilation of Latex documents http://www.winedt.com/index.html
+- LaTeX/Document Structure https://en.wikibooks.org/wiki/LaTeX/Document_Structure
+
+
 
