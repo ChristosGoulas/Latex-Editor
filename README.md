@@ -42,6 +42,9 @@ and the version tracking mechanism has not been enabled before.
 - [x] As a user, I should be able to save the Latex document on disk storage.
 - [x] As a user, I should be able to load the Latex document from disk storage.
 
+# Desing Patterns
+
+
 # References
 - General information about the Latex project https://www.latex-project.org/
 - Download MikTex - Latex distribution - https://miktex.org/
