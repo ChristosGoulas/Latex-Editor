@@ -25,8 +25,8 @@ should notify me if I try to add Latex commands that are not allowed in the Late
 track of the document evolution history, at any time. The history consists of a sequence of
 subsequent versions of the Latex document. The mechanism should provide at least two alternative
 storage strategies for the document evolution history:
--o Volatile (default strategy): for each document change the mechanism keeps the previous
+- Volatile (default strategy): for each document change the mechanism keeps the previous
 version of the document in a main memory list of subsequent document versions.
--o Stable: for each document change the mechanism keeps the previous version of the
+- Stable: for each document change the mechanism keeps the previous version of the
 document on disk storage.
 
