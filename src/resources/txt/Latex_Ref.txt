@@ -1,0 +1,62 @@
+                                What is the LaTeX product?
+
+LaTeX - A document preparation system:
+
+LaTeX  is a high-quality typesetting system. It includes features
+designed for the production of technical and scientific documentation. 
+LaTeX is the de facto standard for the communication and publication of scientific documents. 
+It is most often used for medium-to-large technical or scientific documents
+but it can be used for almost any form of publishing.
+LaTeX is not a word processor! Instead,
+LaTeX encourages authors not to worry too much about the appearance of their documents
+but to concentrate on getting the right content.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+LaTeX Features:
+
+-Typesetting journal articles, technical reports, books, and slide presentations.
+-Control over large documents containing sectioning, cross-references, tables and figures.
+-Typesetting of complex mathematical formulas.
+-Advanced typesetting of mathematics with AMS-LaTeX.
+-Automatic generation of bibliographies and indexes.
+-Multi-lingual typesetting.
+-Inclusion of artwork, and process or spot colour.
+-Using PostScript or Metafont fonts.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The purpose of the LaTeX document structure:
+
+The main point of writing a text is to convey ideas, information, or knowledge to the reader.
+The reader will understand the text better if these ideas are well-structured,
+and will see and feel this structure much better if the typographical form
+reflects the logical and semantic structure of the content.
+LaTeX is different from other typesetting systems in that you just
+have to tell it the logical and semantical structure of a text.
+It then derives the typographical form of the text according to the rules given in the
+document class file and in various style files.
+LaTeX allows users to structure their documents with a variety of hierarchical constructs
+including chapters, sections, subsections and paragraphs.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+LaTeX document structure:
+
+When LaTeX processes an input file, it expects it to follow a certain structure.
+Thus every input file must contain the commands:
+                                \documentclass{...}
+                                
+                                \begin{document}
+                                ...
+                                \end{document}
+The area between \documentclass{...} and \begin{document} is called the preamble.
+It normally contains commands that affect the entire document.
+After the preamble, the text of your document is enclosed between
+two commands which identify the beginning and end of the actual document:
+                                \begin{document}
+                                ...
+                                \end{document}
+You would put your text where the dots are.
+The reason for marking off the beginning of your text is that LaTeX allows you
+to insert extra setup specifications before it (where the blank line is in the example above: we'll be using this soon).
+The reason for marking off the end of your text is to provide a place for LaTeX to be programmed to do extra stuff
+automatically at the end of the document, like making an index.
+
+A useful side-effect of marking the end of the document text is that you can store comments or
+temporary text underneath the \end{document} in the knowledge that LaTeX will never try to typeset them:
+                                \end{document}
