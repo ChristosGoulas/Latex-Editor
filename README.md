@@ -43,7 +43,10 @@ and the version tracking mechanism has not been enabled before.
 - [x] As a user, I should be able to load the Latex document from disk storage.
 
 # Desing Patterns
-
+Prototype
+Strategy
+Factory
+Command
 
 # References
 - General information about the Latex project https://www.latex-project.org/
