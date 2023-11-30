@@ -45,8 +45,8 @@ and the version tracking mechanism has not been enabled before.
 # Desing Patterns
 Prototype <br />
 Strategy <br />
--Factory <br />
--Command <br />
+Factory <br />
+Command <br />
 
 # References
 - General information about the Latex project https://www.latex-project.org/
