@@ -62,7 +62,6 @@ Command <br />
 9. Run
 10. Proceed
 
-
 # References
 - General information about the Latex project https://www.latex-project.org/
 - Download MikTex - Latex distribution - https://miktex.org/
