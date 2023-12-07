@@ -43,10 +43,25 @@ and the version tracking mechanism has not been enabled before.
 - [x] As a user, I should be able to load the Latex document from disk storage.
 
 # Desing Patterns
+
 Prototype <br />
 Strategy <br />
 Factory <br />
 Command <br />
+
+# Running Latex-Editor
+
+1. Download .zip
+2. Unzip localy
+3. Throught Eclipse Open Projects from File System...
+4. Select Project
+5. Run As...
+6. Run Configurations
+7. In tab "Main", In submenu "Main Class" click "Include_system libraries when searching for a main class"
+8. Click Search.. and select GUI.LatexEditorView
+9. Run
+10. Proceed
+
 
 # References
 - General information about the Latex project https://www.latex-project.org/
