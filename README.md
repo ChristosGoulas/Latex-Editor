@@ -49,21 +49,6 @@ Strategy <br />
 Factory <br />
 Command <br />
 
-# Running Latex-Editor
-
-1. Download .zip.
-2. Unzip localy.
-3. Throught Eclipse Open Projects from File System...
-4. Select Project.
-5. Run As...
-6. Run Configurations.
-7. Double Click Java Application.
-8. In tab "Main", in submenu "Project" click "Browse...", find Latex-Editor-main.
-9. In tab "Main", in submenu "Main Class" click "Include_system libraries when searching for a main class".
-10. Click Search.. and select GUI.LatexEditorView.
-11. Run.
-12. Proceed.
-
 # References
 - General information about the Latex project https://www.latex-project.org/
 - Download MikTex - Latex distribution - https://miktex.org/
