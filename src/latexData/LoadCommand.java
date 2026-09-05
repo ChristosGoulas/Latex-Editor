@@ -14,15 +14,21 @@ public class LoadCommand implements Command {
 	
 	public void execute() {
 		String path = this.view.getPath();
-		int index = path.lastIndexOf("\\");
-		String fileName = path.substring(index + 1);
+		if (path == null || path.isEmpty()) {
+			this.view.setTemplateType("Empty");
+			return;
+		}
+		int backSlashIndex = path.lastIndexOf('\\');
+		int slashIndex = path.lastIndexOf('/');
+		int index = Math.max(backSlashIndex, slashIndex);
+		String fileName = index >= 0 ? path.substring(index + 1) : path;
 		this.view.setName(fileName);
 		String contents = this.docMan.getTemplateText(8, path);
 		this.view.getTextArea().setText(contents);
 		System.out.println("Name:" + this.view.getName());
 		
-		if(contents != null) {
-			String firstLine = contents.substring(0, contents.indexOf("\n"));
+		if (contents != null && !contents.isEmpty()) {
+			String firstLine = contents.contains("\n") ? contents.substring(0, contents.indexOf("\n")) : contents;
 			if(firstLine.contains("book")) {
 				this.view.setTemplateType("Book");
 				System.out.println("Template Type: " + this.view.getTemplateType());
@@ -40,11 +46,6 @@ public class LoadCommand implements Command {
 			}
 			else if(firstLine.contains("letter")) {
 				this.view.setTemplateType("Letter");
-				System.out.println("Template Type: " + this.view.getTemplateType());
-				return;
-			}
-			else {
-				this.view.setTemplateType("Empty");
 				System.out.println("Template Type: " + this.view.getTemplateType());
 				return;
 			}

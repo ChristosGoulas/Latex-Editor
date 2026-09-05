@@ -104,7 +104,7 @@ class AddLatexCommandTest {
 		tsiouGui.setCommandToLoad("hline");
 		AddLatexCommand alc = new AddLatexCommand(tsiouGui);
 		alc.execute();
-		assertEquals(tsiouGui.getTextArea().getText(), "\\ hline");
+		assertEquals(tsiouGui.getTextArea().getText(), "\\hline");
 	}
 	@Test
 	void includegraphicsWidthHeightCommandTest() {

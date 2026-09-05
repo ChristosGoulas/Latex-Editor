@@ -22,7 +22,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "chapter.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -46,7 +46,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "section.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -69,7 +69,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "subsection.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -92,7 +92,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "subsubsection.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -116,7 +116,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "begin{itemize}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -140,7 +140,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "item.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -164,7 +164,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "end{itemize}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -187,7 +187,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "begin{enumerate}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -210,7 +210,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "end{enumerate}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -233,7 +233,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "begin{table}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -256,7 +256,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "caption{....}label{...tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -279,7 +279,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "begin{tabular}{c}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -302,7 +302,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "hline.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -325,7 +325,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "end{tabular}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -348,7 +348,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "end{table}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -371,7 +371,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "begin{figure}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -394,7 +394,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "includegraphics.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 
@@ -417,7 +417,7 @@ public class AddLatexCommand implements Command {
 			String fileName = "end{figure}.tex";
 			String line = null;
 			 try {
-				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/resources/tex/commands/"+fileName)));
+				 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/tex/commands/"+fileName)));
 				 while((line = bufferedReader.readLine()) != null) {
 		                records += line;
 		            } 

@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+if (JavaVersion.current() <= JavaVersion.VERSION_21) {
+    apply plugin: 'jacoco'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/GUI', 'src/latexData']
+        }
+        resources {
+            srcDirs = ['src/resources']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/latexTest']
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.7.0'
+}
+
+test {
+    useJUnitPlatform()
+    if (JavaVersion.current() <= JavaVersion.VERSION_21) {
+        finalizedBy jacocoTestReport
+    }
+}
+
+if (JavaVersion.current() <= JavaVersion.VERSION_21) {
+    jacoco {
+        toolVersion = '0.8.13'
+    }
+
+    jacocoTestReport {
+        dependsOn test
+        reports {
+            xml.required = true
+            html.required = true
+            csv.required = false
+        }
+    }
+}
+
+application {
+    mainClass = 'GUI.LatexEditorView'
+}

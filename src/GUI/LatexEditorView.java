@@ -2,6 +2,7 @@ package GUI;
 
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.TextArea;
 import java.awt.event.ActionEvent;
@@ -54,7 +55,9 @@ public class LatexEditorView {
 			public void run() {
 				try {
 					LatexEditorView window = new LatexEditorView();
-					window.GUI.setVisible(true);
+					if (window.GUI != null) {
+						window.GUI.setVisible(true);
+					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -76,8 +79,10 @@ public class LatexEditorView {
 		this.docManager = docManager;
 		this.myController = myController;
 		this.versionManager = versionManager;
-		JFrame frame = new JFrame("Frame To Use");
-		this.FrameToUse = frame; 
+		if (!GraphicsEnvironment.isHeadless()) {
+			JFrame frame = new JFrame("Frame To Use");
+			this.FrameToUse = frame;
+		}
 		this.name = "default";
 		
 		docManager.initDocs();
@@ -301,16 +306,20 @@ public class LatexEditorView {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		this.textArea = new TextArea();
+		textArea.setForeground(Color.BLACK);
+		textArea.setBackground(Color.LIGHT_GRAY);
+		textArea.setBounds(147, 34, 699, 912);
+
+		if (GraphicsEnvironment.isHeadless()) {
+			return;
+		}
+
 		GUI = new JFrame();
 		GUI.getContentPane().setBackground(Color.WHITE);
 		GUI.setBounds(100, 100, 1381, 1078);
 		GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		GUI.getContentPane().setLayout(null);
-		
-		this.textArea = new TextArea();
-		textArea.setForeground(Color.BLACK);
-		textArea.setBackground(Color.LIGHT_GRAY);
-		textArea.setBounds(147, 34, 699, 912);
 		GUI.getContentPane().add(textArea);
 		
 		JLabel lblLatexText = new JLabel("LaTeX File:");
@@ -341,7 +350,7 @@ public class LatexEditorView {
 		
 		JMenu mnNewMenu_4 = new JMenu("New Latex File");
 		
-		ImageIcon newDocIcon = new ImageIcon(getClass().getResource("/resources/icons/newDocumentIcon.jpg"));
+		ImageIcon newDocIcon = new ImageIcon(getClass().getResource("/icons/newDocumentIcon.jpg"));
 		Image imageNewDoc = newDocIcon.getImage(); // transform it
 		Image newimgNewDoc = imageNewDoc.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		newDocIcon = new ImageIcon(newimgNewDoc);  // transform it back
@@ -351,7 +360,7 @@ public class LatexEditorView {
 				
 		JMenuItem mntmNewMenuItem = new JMenuItem("Book Template");
 		
-		ImageIcon bookIcon = new ImageIcon(getClass().getResource("/resources/icons/bookIcon.png"));
+		ImageIcon bookIcon = new ImageIcon(getClass().getResource("/icons/bookIcon.png"));
 		Image imagebook = bookIcon.getImage(); // transform it 
 		Image newimgbook = imagebook.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		bookIcon = new ImageIcon(newimgbook);  // transform it back
@@ -382,7 +391,7 @@ public class LatexEditorView {
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Article Template");
 		
-		ImageIcon articleIcon = new ImageIcon(getClass().getResource("/resources/icons/articleIcon.png"));
+		ImageIcon articleIcon = new ImageIcon(getClass().getResource("/icons/articleIcon.png"));
 		Image imagearticle = articleIcon.getImage(); // transform it 
 		Image newimgarticle = imagearticle.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		articleIcon = new ImageIcon(newimgarticle);  // transform it back
@@ -413,7 +422,7 @@ public class LatexEditorView {
 		
 		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Letter Template");
 		
-		ImageIcon letterIcon = new ImageIcon(getClass().getResource("/resources/icons/letterIcon.png"));
+		ImageIcon letterIcon = new ImageIcon(getClass().getResource("/icons/letterIcon.png"));
 		Image imageletter = letterIcon.getImage(); // transform it 
 		Image newimgletter = imageletter.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		letterIcon = new ImageIcon(newimgletter);  // transform it back
@@ -446,7 +455,7 @@ public class LatexEditorView {
 		
 		JMenuItem mntmEmpty = new JMenuItem("Empty Template");
 		
-		ImageIcon emptyIcon = new ImageIcon(getClass().getResource("/resources/icons/emptyIcon.jpg"));
+		ImageIcon emptyIcon = new ImageIcon(getClass().getResource("/icons/emptyIcon.jpg"));
 		Image imageempty = emptyIcon.getImage(); // transform it 
 		Image newimgempty = imageempty.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		emptyIcon = new ImageIcon(newimgempty);  // transform it back
@@ -477,7 +486,7 @@ public class LatexEditorView {
 		
 		JMenuItem ReportTemplateButton = new JMenuItem("Report Template");
 		
-		ImageIcon reportIcon = new ImageIcon(getClass().getResource("/resources/icons/reportIcon.png"));
+		ImageIcon reportIcon = new ImageIcon(getClass().getResource("/icons/reportIcon.png"));
 		Image imagereport = reportIcon.getImage(); // transform it 
 		Image newimgreport = imagereport.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		reportIcon = new ImageIcon(newimgreport);  // transform it back
@@ -511,7 +520,7 @@ public class LatexEditorView {
 		
 		JMenuItem mntmOpenFile = new JMenuItem("Open File...");
 		
-		ImageIcon openFileeIcon = new ImageIcon(getClass().getResource("/resources/icons/openFileIcon.png"));
+		ImageIcon openFileeIcon = new ImageIcon(getClass().getResource("/icons/openFileIcon.png"));
 		Image imageopenFile = openFileeIcon.getImage(); // transform it 
 		Image newimgopenFile = imageopenFile.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		openFileeIcon = new ImageIcon(newimgopenFile);  // transform it back
@@ -539,7 +548,7 @@ public class LatexEditorView {
 		});
 		mnNewMenu.add(mntmSaveFile);
 		
-		ImageIcon saveIcon = new ImageIcon(getClass().getResource("/resources/icons/saveIcon.png"));
+		ImageIcon saveIcon = new ImageIcon(getClass().getResource("/icons/saveIcon.png"));
 		Image imagesave = saveIcon.getImage(); // transform it 
 		Image newimgsave = imagesave.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		saveIcon = new ImageIcon(newimgsave);  // transform it back
@@ -558,7 +567,7 @@ public class LatexEditorView {
 		});
 		mnNewMenu.add(mntmPrint);
 		
-		ImageIcon printIcon = new ImageIcon(getClass().getResource("/resources/icons/printIcon.png"));
+		ImageIcon printIcon = new ImageIcon(getClass().getResource("/icons/printIcon.png"));
 		Image imageprint = printIcon.getImage(); // transform it 
 		Image newimgoprint = imageprint.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		printIcon = new ImageIcon(newimgoprint);  // transform it back
@@ -576,7 +585,7 @@ public class LatexEditorView {
 		});
 		mnNewMenu.add(mntmQuitProgram);
 		
-		ImageIcon exitIcon = new ImageIcon(getClass().getResource("/resources/icons/exitIcon.jpg"));
+		ImageIcon exitIcon = new ImageIcon(getClass().getResource("/icons/exitIcon.jpg"));
 		Image imageexit = exitIcon.getImage(); // transform it 
 		Image newimgoexit = imageexit.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		exitIcon = new ImageIcon(newimgoexit);  // transform it back
@@ -1413,7 +1422,7 @@ public class LatexEditorView {
 		});
 		mnNewMenu_1.add(menuItem_58);
 		
-		ImageIcon manualIcon = new ImageIcon(getClass().getResource("/resources/icons/manualIcon.png"));
+		ImageIcon manualIcon = new ImageIcon(getClass().getResource("/icons/manualIcon.png"));
 		Image imagemanual = manualIcon.getImage(); // transform it 
 		Image newimgomanual= imagemanual.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		manualIcon = new ImageIcon(newimgomanual);
@@ -1430,7 +1439,7 @@ public class LatexEditorView {
 		});
 		btnRollBackTo.setBounds(852, 121, 230, 29);
 		
-		ImageIcon undoIcon = new ImageIcon(getClass().getResource("/resources/icons/undoIcon.png"));
+		ImageIcon undoIcon = new ImageIcon(getClass().getResource("/icons/undoIcon.png"));
 		Image imageundo = undoIcon.getImage(); // transform it 
 		Image newimgoundo= imageundo.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		undoIcon = new ImageIcon(newimgoundo);  // transform it back
@@ -1482,7 +1491,7 @@ public class LatexEditorView {
 		});
 		btnCommiteChanges.setBounds(852, 41, 230, 29);
 		
-		ImageIcon commitIcon = new ImageIcon(getClass().getResource("/resources/icons/commitIcon.png"));
+		ImageIcon commitIcon = new ImageIcon(getClass().getResource("/icons/commitIcon.png"));
 		Image imagecommit = commitIcon.getImage(); // transform it 
 		Image newimgcommit = imagecommit.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
 		commitIcon = new ImageIcon(newimgcommit);  // transform it back
